@@ -4,8 +4,8 @@
     "formatOptions": {
       "snippetInterface": "async-await"
     },
-    "paths": ["src/features/login.feature"],
-    "publishQuiet": true,
+    "paths": ["src/features/*.feature"],
+    "publishQuiet": false,
     "dryRun": false,
 
     "require": ["src/step-definitions/*.ts", "src/support/hooks.ts"],
@@ -13,8 +13,8 @@
     "format": [
       "summary",
       "progress-bar",
-      "json:reports/cucumber-report.json",
-      "html:reports/cucumber-report.html"
+      "json:reports/cucumber-report.json"
+      
     ]
   }
 }
