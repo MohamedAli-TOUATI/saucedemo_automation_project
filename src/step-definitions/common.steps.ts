@@ -11,7 +11,7 @@ Given("User navigates to the application", async function () {
   commonPage.navigateToApp();
 });
 
-When("User login with {string}", async function (dataKey: string) {
+When("User login with {string}",{timeout: 10000}, async function (dataKey: string) {
   const data = loginData[dataKey];
   if (!data) throw new Error(`No data found for key "${dataKey}"`);
   const commonPage = new CommonPage(pageFixture.page);

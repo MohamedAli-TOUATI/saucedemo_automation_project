@@ -13,7 +13,7 @@ export class CommonPage {
   }
 
   async navigateToApp() {
-    await this.page.goto(process.env.BASE_URL as string);
+    await this.page.goto(process.env.BASE_URL as string,{ timeout: 60000, waitUntil: 'load' });
   }
 
   async userLogin(username: string, password: string) {

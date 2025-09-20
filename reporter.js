@@ -1,25 +1,17 @@
-const reporter = require('multiple-cucumber-html-reporter');
+const report = require("multiple-cucumber-html-reporter");
 
-reporter.generate({
-  jsonDir: 'reports', // dossier où cucumber-js génère le JSON
-  reportPath: 'reports/html', // dossier du rapport HTML
+report.generate({
+  jsonDir: "reports", // chemin du dossier contenant cucumber-report.json
+  reportPath: "reports/html", // dossier où sera généré le HTML
   metadata: {
     browser: {
-      name: 'chrome',
-      version: '120'
+      name: "chrome",
+      version: "latest",
     },
-    device: 'Local test machine',
+    device: "Local test machine",
     platform: {
-      name: 'windows',
-      version: '10'
-    }
+      name: "windows",
+      version: "11",
+    },
   },
-  customData: {
-    title: 'SauceDemo Automation Report',
-    data: [
-      { label: 'Project', value: 'SauceDemo Automation' },
-      { label: 'Release', value: '1.0.0' },
-      { label: 'Execution Start Time', value: new Date().toLocaleString() },
-    ]
-  }
 });
