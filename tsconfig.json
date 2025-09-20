@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@support/*": ["support/*"],
+      "@steps/*": ["step-definitions/*"],
+      "@features/*": ["features/*"]
+    }
+  }
+}

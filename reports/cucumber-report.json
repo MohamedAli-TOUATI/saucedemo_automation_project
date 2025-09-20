@@ -1,0 +1,155 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "saucedemo-login;login-functionality",
+        "keyword": "Scenario Outline",
+        "line": 13,
+        "name": "Login functionality",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 998203599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 215400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User navigates to the application",
+            "match": {
+              "location": "src\\step-definitions\\common.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6073200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "User login with \"validUser\"",
+            "match": {
+              "location": "src\\step-definitions\\common.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1132085999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "User should \"<expectedResult>\"",
+            "match": {
+              "location": "src\\step-definitions\\login.step.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1006699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TC001",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "saucedemo-login;login-functionality",
+        "keyword": "Scenario Outline",
+        "line": 14,
+        "name": "Login functionality",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 528020900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 84699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User navigates to the application",
+            "match": {
+              "location": "src\\step-definitions\\common.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3230300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "User login with \"invalidUser\"",
+            "match": {
+              "location": "src\\step-definitions\\common.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 833082799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "User should \"<expectedResult>\"",
+            "match": {
+              "location": "src\\step-definitions\\login.step.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1243000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TC001",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "saucedemo-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "SauceDemo Login",
+    "tags": [],
+    "uri": "src\\features\\login.feature"
+  }
+]

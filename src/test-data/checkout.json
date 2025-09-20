@@ -1,0 +1,13 @@
+{
+  "Item": {
+    "itemName": "Sauce Labs Backpack"
+  },
+  "UserInformations": {
+    "firstName": "med ali",
+    "lastName": "Touati",
+    "postalCode": "1095"
+  },
+  "ConfirmationMessage": {
+    "message": "Thank you for your order!"
+  }
+}
