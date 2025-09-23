@@ -4,92 +4,6 @@
     "elements": [
       {
         "description": "",
-        "id": "saucedemo-login;login-with-valid-user",
-        "keyword": "Scenario Outline",
-        "line": 13,
-        "name": "Login with valid user",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 836511000
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 293700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "User navigates to the application",
-            "match": {
-              "location": "src\\step-definitions\\common.steps.ts:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 9376900
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 8,
-            "name": "User login with \"validUser\"",
-            "match": {
-              "location": "src\\step-definitions\\common.steps.ts:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3396715400
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 9,
-            "name": "User should \"see list of products\"",
-            "match": {
-              "location": "src\\step-definitions\\login.step.ts:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1827999
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@TC001",
-            "line": 6
-          },
-          {
-            "name": "@smoke",
-            "line": 6
-          }
-        ],
-        "type": "scenario"
-      }
-    ],
-    "id": "saucedemo-login",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "SauceDemo Login",
-    "tags": [],
-    "uri": "src\\features\\login.feature"
-  },
-  {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
         "id": "product-browsing;user-can-see-the-product-list-and-sort-products-by-price-low-to-high",
         "keyword": "Scenario",
         "line": 7,
@@ -100,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 694341900
+              "duration": 470544600
             }
           },
           {
@@ -108,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 95100
+              "duration": 226400
             }
           },
           {
@@ -121,7 +35,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3765000
+              "duration": 8821800
             }
           },
           {
@@ -134,7 +48,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2761737400
+              "duration": 1609673599
             }
           },
           {
@@ -147,7 +61,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4304799
+              "duration": 2284000
             }
           },
           {
@@ -160,7 +74,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9943999
+              "duration": 3247299
             }
           },
           {
@@ -173,7 +87,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 604483600
+              "duration": 542606300
             }
           }
         ],
