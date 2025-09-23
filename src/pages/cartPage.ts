@@ -10,7 +10,7 @@ export class CartPage {
     this.page = page;
     this.cartLink = page.locator('[data-test="shopping-cart-link"]');
     this.cartItems = page.locator(".inventory_item_name");
-    this.cartBadge = page.locator(".shopping_cart_badge");
+    this.cartBadge = page.locator('[data-test="shopping-cart-badge"]');
   }
 
   async openCart() {
@@ -19,8 +19,13 @@ export class CartPage {
 
   async getCartBadgeText(): Promise<string> {
     const badge = this.cartBadge;
+    // attendre que l'élément existe et soit visible
     if ((await badge.count()) === 0) {
-      return "";
+        await badge.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+    }
+
+    if ((await badge.count()) === 0) {
+        return ""; // toujours pas trouvé
     }
     return (await badge.textContent())?.trim() ?? "";
   }
