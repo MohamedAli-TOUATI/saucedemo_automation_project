@@ -5,8 +5,6 @@
   "scripts": {
     "test": "cucumber-js test",
     "test:tag": "cucumber-js --tags",
-    "smoke": "cucumber-js src/features --tags @smoke --format json:reports/cucumber.json",
-    "regression": "cucumber-js src/features --tags @regression --format json:reports/cucumber.json",
     "report": "node ./reporter.js",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
