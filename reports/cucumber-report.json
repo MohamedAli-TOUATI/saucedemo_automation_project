@@ -1,1 +1,92 @@
-[]
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "saucedemo-login;login-with-valid-user",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Login with valid user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 485830700
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 134600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User navigates to the application",
+            "match": {
+              "location": "src\\step-definitions\\common.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8352000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "User login with \"validUser\"",
+            "match": {
+              "location": "src\\step-definitions\\common.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 920300699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "User should \"expectedResult\"",
+            "match": {
+              "location": "src\\step-definitions\\login.step.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1050900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 6
+          },
+          {
+            "name": "@TC001",
+            "line": 6
+          },
+          {
+            "name": "@smoke",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "saucedemo-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "SauceDemo Login",
+    "tags": [],
+    "uri": "src\\features\\login.feature"
+  }
+]

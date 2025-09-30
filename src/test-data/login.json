@@ -5,7 +5,14 @@
   },
   "invalidUser": {
     "username": "fakeuser",
-    "password": "wrongpass",
-    "errorMessage": "Username and password do not match any user in this service"
+    "password": "wrongpass"
+    
+  },
+  
+  "ExpectedResult": {
+   "validUser": "see list of products",
+   "invalidUser": "see error message"
   }
+    
+  
 }

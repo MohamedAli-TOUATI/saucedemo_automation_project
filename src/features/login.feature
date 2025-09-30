@@ -4,20 +4,16 @@ Background:
   Given User navigates to the application
 
 @login @TC001 @smoke
-Scenario Outline: Login with valid user
-When User login with "<userCredential>"
-Then User should "<expectedResult>"
+Scenario: Login with valid user
+When User login with "validUser"
+Then User should "expectedResult"
 
-Examples:
-  | index | userCredential | expectedResult |
-  | 1     | validUser      | see list of products |
+
 
 @login @TC002 @regression
-Scenario Outline: Login with invalid user
-When User login with "<userCredential>"
-Then User should "<expectedResult>"
+Scenario: Login with invalid user
+When User login with "invalidUser"
+Then User should "expectedResult"
 
-Examples:
-  | index | userCredential | expectedResult       |
-  | 2     | invalidUser    | see error message "errorMessage" |
+
     

@@ -9,14 +9,14 @@ dotenv.config();
 let browser: Browser;
 
 Before(async function () {
-  browser = await chromium.launch({ headless: false });
+  browser = await chromium.launch({ headless: false,timeout: 60000 });
   const page = await browser.newPage();
   pageFixture.page = page;
 });
 Before(function ({ pickle }) {
   // Récupère le nom du fichier feature courant
   const featureFile = pickle.uri; // ex: src/features/cart.feature
-  this.featureName = path.basename(featureFile, ".feature"); // "cart"
+  this.featureName = path.basename(featureFile, ".feature"); 
 });
 
 /*After(async function (){
