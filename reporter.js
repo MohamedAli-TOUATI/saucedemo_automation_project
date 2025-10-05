@@ -1,27 +1,33 @@
-const report = require("multiple-cucumber-html-reporter");
+const reporter = require('cucumber-html-reporter');
+const path = require('path');
 
-report.generate({
-  jsonDir: "reports", // dossier où le fichier JSON est généré
-  reportPath: "reports/html", // dossier du rapport final
+const options = {
+  theme: 'bootstrap',
+  jsonFile: path.join(__dirname, 'reports/cucumber-report.json'),
+  output: path.join(__dirname, 'reports/html/cucumber-report.html'),
+  reportSuiteAsScenarios: true,
+  scenarioTimestamp: true,
+  launchReport: false,
   metadata: {
-    browser: {
-      name: "chrome",
-      version: "latest",
-    },
-    device: "Local test machine",
-    platform: {
-      name: "windows",
-      version: "11",
-    },
+    "Application": "SauceDemo",
+    "Environnement": "Jenkins CI/CD",
+    "Navigateur": "Chrome",
+    "Plateforme": "Windows 11",
+    "Version": "1.0.0",
+    "Exécuté le": new Date().toLocaleString('fr-FR')
   },
-  customData: {
-    title: "SauceDemo Automation Report",
-    data: [
-      { label: "Project", value: "SauceDemo Automation" },
-      { label: "Release", value: "1.0.0" },
-      { label: "Execution Date", value: new Date().toISOString() },
-    ],
-  },
-});
-console.log('✅ Rapport HTML généré avec succès dans reports/html/');
+  screenshotsDirectory: 'reports/screenshots/',
+  storeScreenshots: true,
+  noInlineScreenshots: false
+};
+
+// Créer le dossier si nécessaire
+const fs = require('fs');
+const reportsDir = path.join(__dirname, 'reports/html');
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { recursive: true });
+}
+
+reporter.generate(options);
+console.log('📊 Rapport HTML professionnel généré !');
 process.exit(0);
