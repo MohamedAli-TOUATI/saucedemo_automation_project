@@ -1,33 +1,39 @@
-const report = require("multiple-cucumber-html-reporter");
+const reporter = require('cucumber-html-reporter');
+const path = require('path');
+const fs = require('fs');
 
-report.generate({
-  jsonDir: "reports",
-  reportPath: "reports/html",
-  pageTitle: "SauceDemo Automation Report",
-  reportName: "Rapport des Tests Automatisés",
-  displayDuration: true,
-  displayReportTime: true,
+// Créer le dossier reports/html si nécessaire
+const reportsDir = path.join(__dirname, 'reports/html');
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { recursive: true });
+}
+
+const options = {
+  theme: 'bootstrap',
+  jsonFile: path.join(__dirname, 'reports/cucumber-report.json'),
+  output: path.join(__dirname, 'reports/html/cucumber-report.html'),
+  reportSuiteAsScenarios: true,
+  scenarioTimestamp: true,
+  launchReport: false,
   metadata: {
-    browser: {
-      name: "chrome",
-      version: "latest",
-    },
-    device: "Serveur Jenkins",
-    platform: {
-      name: "Windows",
-      version: "11",
-    },
+    "Application": "SauceDemo",
+    "Environnement": "Jenkins CI/CD", 
+    "Navigateur": "Chrome Latest",
+    "Plateforme": "Windows 11",
+    "Version": "1.0.0",
+    "Exécuté le": new Date().toLocaleString('fr-FR')
   },
-  customData: {
-    title: "Informations d'Exécution",
-    data: [
-      { label: "Projet", value: "SauceDemo Automation" },
-      { label: "Version", value: "1.0.0" },
-      { label: "Environnement", value: "CI/CD Jenkins" },
-      { label: "Date d'exécution", value: new Date().toLocaleString('fr-FR') },
-    ],
-  },
-});
+  screenshotsDirectory: 'reports/screenshots/',
+  storeScreenshots: false,
+  noInlineScreenshots: false
+};
 
-console.log('📊 Rapport HTML généré avec succès !');
-process.exit(0);
+try {
+  reporter.generate(options);
+  console.log('🎉 Rapport HTML Bootstrap généré avec succès !');
+  console.log('📁 Fichier : reports/html/cucumber-report.html');
+  process.exit(0);
+} catch (error) {
+  console.error('❌ Erreur génération rapport:', error);
+  process.exit(1);
+}
