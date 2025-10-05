@@ -25,10 +25,26 @@ Then("User should see the list of products", async function () {
 
 When("User adds {string} to the cart", async function (dataKey: string) {
   const commonPage = new CommonPage(pageFixture.page);
-  let testData;
-  if (this.featureName === "cart") testData = cartData[dataKey];
-  else if (this.featureName === "checkout") testData = checkoutData[dataKey];
+  let testData: any;
 
-  if (!testData) throw new Error(`No data found for key "${dataKey}"`);
-  commonPage.addItemToCart(testData.itemName);
+  // Identifier la source de données selon la feature en cours
+  switch (this.featureName?.toLowerCase()) {
+    case "cart":
+      testData = cartData[dataKey];
+      break;
+    case "checkout":
+      testData = checkoutData[dataKey];
+      break;
+    default:
+      throw new Error(`Unsupported feature name: ${this.featureName}`);
+  }
+
+  // Vérifier si les données existent
+  if (!testData) {
+    throw new Error(`❌ No data found for key "${dataKey}" in feature "${this.featureName}"`);
+  }
+
+  console.log(`🛒 Adding item "${testData.itemName}" to the cart...`);
+  await commonPage.addItemToCart(testData.itemName);
+  console.log(`✅ Item "${testData.itemName}" added successfully.`);
 });

@@ -40,16 +40,5 @@ Then(
   },
 );
 
-Then(
-  "assert cart badge should show {string}",
-  async function (dataKey: string) {
-    const cartePage = new CartPage(pageFixture.page);
-    const data = testData[dataKey];
-    if (!data) throw new Error(`No data found for key "${dataKey}"`);
 
-    // Attendre que le badge disparaisse ou soit vide
-    await cartePage.page.waitForTimeout(1000); // optionnel, pour laisser le temps à l'UI
-    const badgeText = await cartePage.getCartBadgeText();
-    expect(badgeText).toBe(data.count);
-  },
-);
+

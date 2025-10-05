@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "saucedemo-login;login-with-valid-user",
+        "id": "shopping-cart;user-adds-a-product-to-the-cart",
         "keyword": "Scenario",
         "line": 7,
-        "name": "Login with valid user",
+        "name": "User adds a product to the cart",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 485830700
+              "duration": 613980399
             }
           },
           {
@@ -22,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 134600
+              "duration": 174399
             }
           },
           {
@@ -35,7 +35,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8352000
+              "duration": 4850500
             }
           },
           {
@@ -48,45 +48,97 @@
             },
             "result": {
               "status": "passed",
-              "duration": 920300699
+              "duration": 1123412099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "User adds \"Item\" to the cart",
+            "match": {
+              "location": "src\\step-definitions\\common.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 171057799
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
-            "name": "User should \"expectedResult\"",
+            "line": 10,
+            "name": "The cart badge should show \"countBadge\"",
             "match": {
-              "location": "src\\step-definitions\\login.step.ts:8"
+              "location": "src\\step-definitions\\cart.step.ts:7"
             },
             "result": {
               "status": "passed",
-              "duration": 1050900
+              "duration": 1041652600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "User removes \"Item\" from the cart",
+            "match": {
+              "location": "src\\step-definitions\\cart.step.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 146858199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "the \"Item\" should not be in the cart",
+            "match": {
+              "location": "src\\step-definitions\\cart.step.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59073899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "The cart badge should show \"emptyBadge\"",
+            "match": {
+              "location": "src\\step-definitions\\cart.step.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6041560999
             }
           }
         ],
         "tags": [
           {
-            "name": "@login",
+            "name": "@cart",
             "line": 6
           },
           {
-            "name": "@TC001",
+            "name": "@TC004",
             "line": 6
           },
           {
-            "name": "@smoke",
+            "name": "@regression",
             "line": 6
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "saucedemo-login",
+    "id": "shopping-cart",
     "line": 1,
     "keyword": "Feature",
-    "name": "SauceDemo Login",
+    "name": "Shopping Cart",
     "tags": [],
-    "uri": "src\\features\\login.feature"
+    "uri": "src\\features\\cart.feature"
   }
 ]

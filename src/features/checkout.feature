@@ -5,7 +5,6 @@ Background:
 
 @checkout @TC005 @regression
 Scenario: User adds a product to the cart and proceeds to payment
-  Given User navigates to the application
   And User login with "validUser"
   When User adds "Item" to the cart
   And User proceeds to checkout "Item"
