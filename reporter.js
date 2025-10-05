@@ -23,3 +23,5 @@ report.generate({
     ],
   },
 });
+console.log('✅ Rapport HTML généré avec succès dans reports/html/');
+process.exit(0);
