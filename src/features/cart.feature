@@ -10,4 +10,4 @@ Feature: Shopping Cart
     Then The cart badge should show "countBadge"
     When User removes "Item" from the cart
     Then the "Item" should not be in the cart
-    And assert cart badge should show "emptyBadge"
+    And The cart badge should show "emptyBadge"
