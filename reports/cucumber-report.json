@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 613980399
+              "duration": 399297200
             }
           },
           {
@@ -22,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 174399
+              "duration": 158100
             }
           },
           {
@@ -35,7 +35,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4850500
+              "duration": 8712300
             }
           },
           {
@@ -48,7 +48,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1123412099
+              "duration": 947319300
             }
           },
           {
@@ -61,7 +61,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 171057799
+              "duration": 112103900
             }
           },
           {
@@ -74,7 +74,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1041652600
+              "duration": 1021572699
             }
           },
           {
@@ -87,7 +87,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 146858199
+              "duration": 103620700
             }
           },
           {
@@ -100,7 +100,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 59073899
+              "duration": 59682199
             }
           },
           {
@@ -112,8 +112,9 @@
               "location": "src\\step-definitions\\cart.step.ts:7"
             },
             "result": {
-              "status": "passed",
-              "duration": 6041560999
+              "status": "failed",
+              "duration": 1507889100,
+              "error_message": "locator.count: Target page, context or browser has been closed\n    at CartPage.<anonymous> (C:\\Users\\Dell\\Desktop\\SauceDemo-Automation-Project\\src\\pages\\cartPage.ts:27:22)\n    at step (C:\\Users\\Dell\\Desktop\\SauceDemo-Automation-Project\\src\\pages\\cartPage.ts:33:23)\n    at Object.next (C:\\Users\\Dell\\Desktop\\SauceDemo-Automation-Project\\src\\pages\\cartPage.ts:14:53)\n    at fulfilled (C:\\Users\\Dell\\Desktop\\SauceDemo-Automation-Project\\src\\pages\\cartPage.ts:5:58)"
             }
           }
         ],
