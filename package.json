@@ -5,7 +5,7 @@
   "scripts": {
     "test": "cucumber-js test",
     "test:tag": "cucumber-js --tags",
-    "report": "node ./reporter.js",
+    "report": "npx ts-node ./reporter.ts",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
     "format": "prettier --write ."
