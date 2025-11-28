@@ -24,7 +24,7 @@ When("User removes {string} from the cart", async function (dataKey: string) {
   const removed = await cartePage.removeItem(data.itemName);
 
   if (!removed) {
-    console.log(`❌ Item "${data.itemName}" does not exist in the cart`);
+    console.log(`Item "${data.itemName}" does not exist in the cart`);
   }
 });
 

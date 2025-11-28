@@ -1,7 +1,5 @@
 import { Given, When, Then } from "@cucumber/cucumber";
-import { chromium, Page, Browser, expect } from "@playwright/test";
 import { pageFixture } from "../support/pageFixtures";
-import * as testData from "../test-data/login.json";
 import { LoginPage } from "../pages/loginPage";
 import { CommonPage } from "../pages/commonPage";
 

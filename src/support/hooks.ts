@@ -14,12 +14,9 @@ Before(async function () {
   pageFixture.page = page;
 });
 Before(function ({ pickle }) {
-  // Récupère le nom du fichier feature courant
-  const featureFile = pickle.uri; // ex: src/features/cart.feature
+  
+  const featureFile = pickle.uri; //src/features/cart.feature
   this.featureName = path.basename(featureFile, ".feature"); 
 });
 
-/*After(async function (){
-    await pageFixture.page.close()
-    await browser.close()
-})*/
+
