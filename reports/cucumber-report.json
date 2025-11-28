@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "shopping-cart;user-adds-a-product-to-the-cart",
+        "id": "saucedemo-login;login-with-valid-user",
         "keyword": "Scenario",
         "line": 7,
-        "name": "User adds a product to the cart",
+        "name": "Login with valid user",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 399297200
+              "duration": 1121366500
             }
           },
           {
@@ -22,7 +22,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 158100
+              "duration": 212900
             }
           },
           {
@@ -31,11 +31,11 @@
             "line": 4,
             "name": "User navigates to the application",
             "match": {
-              "location": "src\\step-definitions\\common.steps.ts:9"
+              "location": "src\\step-definitions\\common.steps.ts:8"
             },
             "result": {
               "status": "passed",
-              "duration": 8712300
+              "duration": 10823400
             }
           },
           {
@@ -44,102 +44,49 @@
             "line": 8,
             "name": "User login with \"validUser\"",
             "match": {
-              "location": "src\\step-definitions\\common.steps.ts:14"
+              "location": "src\\step-definitions\\common.steps.ts:13"
             },
             "result": {
               "status": "passed",
-              "duration": 947319300
+              "duration": 1219340799
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "Then ",
             "line": 9,
-            "name": "User adds \"Item\" to the cart",
+            "name": "User should \"expectedResult\"",
             "match": {
-              "location": "src\\step-definitions\\common.steps.ts:26"
+              "location": "src\\step-definitions\\login.step.ts:6"
             },
             "result": {
               "status": "passed",
-              "duration": 112103900
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 10,
-            "name": "The cart badge should show \"countBadge\"",
-            "match": {
-              "location": "src\\step-definitions\\cart.step.ts:7"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1021572699
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 11,
-            "name": "User removes \"Item\" from the cart",
-            "match": {
-              "location": "src\\step-definitions\\cart.step.ts:18"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 103620700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 12,
-            "name": "the \"Item\" should not be in the cart",
-            "match": {
-              "location": "src\\step-definitions\\cart.step.ts:31"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 59682199
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 13,
-            "name": "The cart badge should show \"emptyBadge\"",
-            "match": {
-              "location": "src\\step-definitions\\cart.step.ts:7"
-            },
-            "result": {
-              "status": "failed",
-              "duration": 1507889100,
-              "error_message": "locator.count: Target page, context or browser has been closed\n    at CartPage.<anonymous> (C:\\Users\\Dell\\Desktop\\SauceDemo-Automation-Project\\src\\pages\\cartPage.ts:27:22)\n    at step (C:\\Users\\Dell\\Desktop\\SauceDemo-Automation-Project\\src\\pages\\cartPage.ts:33:23)\n    at Object.next (C:\\Users\\Dell\\Desktop\\SauceDemo-Automation-Project\\src\\pages\\cartPage.ts:14:53)\n    at fulfilled (C:\\Users\\Dell\\Desktop\\SauceDemo-Automation-Project\\src\\pages\\cartPage.ts:5:58)"
+              "duration": 1063200
             }
           }
         ],
         "tags": [
           {
-            "name": "@cart",
+            "name": "@login",
             "line": 6
           },
           {
-            "name": "@TC004",
+            "name": "@TC001",
             "line": 6
           },
           {
-            "name": "@regression",
+            "name": "@smoke",
             "line": 6
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "shopping-cart",
+    "id": "saucedemo-login",
     "line": 1,
     "keyword": "Feature",
-    "name": "Shopping Cart",
+    "name": "SauceDemo Login",
     "tags": [],
-    "uri": "src\\features\\cart.feature"
+    "uri": "src\\features\\login.feature"
   }
 ]

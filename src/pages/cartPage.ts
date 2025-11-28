@@ -19,13 +19,13 @@ export class CartPage {
 
   async getCartBadgeText(): Promise<string> {
     const badge = this.cartBadge;
-    // attendre que l'élément existe et soit visible
+    
     if ((await badge.count()) === 0) {
         await badge.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
     }
 
     if ((await badge.count()) === 0) {
-        return ""; // toujours pas trouvé
+        return "";
     }
     return (await badge.textContent())?.trim() ?? "";
   }

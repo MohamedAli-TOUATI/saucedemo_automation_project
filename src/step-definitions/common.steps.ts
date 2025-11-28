@@ -1,5 +1,4 @@
 import { Given, Then, When } from "@cucumber/cucumber";
-import { chromium, Page, Browser, expect } from "@playwright/test";
 import { pageFixture } from "../support/pageFixtures";
 import * as loginData from "../test-data/login.json";
 import * as cartData from "../test-data/cart.json";
@@ -27,7 +26,6 @@ When("User adds {string} to the cart", async function (dataKey: string) {
   const commonPage = new CommonPage(pageFixture.page);
   let testData: any;
 
-  // Identifier la source de données selon la feature en cours
   switch (this.featureName?.toLowerCase()) {
     case "cart":
       testData = cartData[dataKey];
@@ -39,9 +37,8 @@ When("User adds {string} to the cart", async function (dataKey: string) {
       throw new Error(`Unsupported feature name: ${this.featureName}`);
   }
 
-  // Vérifier si les données existent
   if (!testData) {
-    throw new Error(`❌ No data found for key "${dataKey}" in feature "${this.featureName}"`);
+    throw new Error(`No data found for key "${dataKey}" in feature "${this.featureName}"`);
   }
 
   console.log(`🛒 Adding item "${testData.itemName}" to the cart...`);
